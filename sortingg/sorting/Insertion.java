@@ -3,13 +3,13 @@ package sortingg.sorting;
 public class Insertion {
     public static void insertionSort(int arr[]){
         for(int i=1; i<arr.length; i++){
-            int key = arr[i];
-            int j = i-1;
-            while(j>=0 && arr[j]>key){
-                arr[j+1] = arr[j];
-                j--;
+            int curr = arr[i];
+            int prev = i-1;
+            while(prev>=0 && arr[prev]>curr){
+                arr[prev+1] = arr[prev];
+                prev--;
             }
-            arr[j+1] = key;
+            arr[prev+1] = curr;
         }
     }
     public static void printArr(int arr[]) {
@@ -23,7 +23,7 @@ public class Insertion {
         int arr[] = {3,1,4,2,5,6};
         insertionSort(arr);
         printArr(arr);
-        
+
     }
     
 }
