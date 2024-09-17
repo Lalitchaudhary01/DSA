@@ -1,6 +1,13 @@
 package Strings;
 
 public class MyString {
+    public static void printLetters(String[] args) {
+        for(int i=0; i<str.length(); i++){
+           System.out.println(str.charAt(i) + " ");
+        }
+        System.out
+        
+    }
     public static void main(String[] args){
         // la
         // strimg are immutable
@@ -17,7 +24,16 @@ public class MyString {
         String name1 = "Rahul";
         String name2 = "Sharma";
         System.out.println(name1 + " " + name2);
+        System.out.println(name1.concat(name2));
+
+        //substring
+        String name3 = "Rahul";
+        System.out.println(name3.substring(1, 4));
+
+        System.out.println(name3.charAt(3));
+
         
+
         
     }
 }
