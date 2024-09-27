@@ -20,7 +20,7 @@ public class SortArrayList {
         System.out.println(list);
         //descending order
         Collections.sort(list, Collections.reverseOrder());
-        System.out.println(list);
+        System.out.println(list); 
     }
     
 }
