@@ -1,4 +1,3 @@
-package Strings;
 
 public class Compare {
     public static void comparing(String str1, String str2) {

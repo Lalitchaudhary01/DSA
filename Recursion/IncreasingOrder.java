@@ -2,7 +2,8 @@ package Recursion;
 
 public class IncreasingOrder {
     public static void printIncreasing(int n){
-        if(n==1){
+        if(
+            n==1){
             System.out.println(n);
             return;
         }
