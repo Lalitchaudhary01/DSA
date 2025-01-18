@@ -1,4 +1,4 @@
-public class LinkedList{
+public class PrintLinkedList {
     public static class Node{
         int data;
         Node next;
@@ -53,13 +53,48 @@ public class LinkedList{
         //step3
         tail = newNode;
     }
+    public static void printLinkedList(){
+        if(head == null){
+            System.out.println("Linked List is empty");
+            return;
+        }
+        Node temp = head;
+        while(temp != null){
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+    //Add in the middle
+    //step 1
+    //create a new node
+    //step 2
+    //find the middle node
+    //step 3
+    //new node's next = middle.next
+    //step 4
+    //middle.next = new node
+    public void addMiddle(int data){
+        //step1
+        Node newNode = new Node(data);
+        //step2
+        Node slow = head;
+        Node fast = head;
+        while(fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //step3
+        newNode.next = slow.next;
+        //step4
+        slow.next = newNode;
+    }
     public static void main(String args[]){
-        LinkedList ll = new LinkedList();
+        PrintLinkedList ll = new PrintLinkedList();
         ll.aadFirst(20);
         ll.aadFirst(10);
         ll.addLast(30);
-        ll.addLast(40);
-      
-
+        printLinkedList();
     }
+    
 }
