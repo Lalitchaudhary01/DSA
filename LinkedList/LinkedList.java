@@ -139,6 +139,20 @@ public class LinkedList{
         }
         return -1;
     }
+    //recursive search
+    //if head is null return false
+    //if head.data == key return true
+    //else return search(head.next, key)
+    public int recSearch(Node head, int key){
+        if(head == null){
+            return -1;
+        }
+        if(head.data == key){
+            return 1;
+        } else {
+            return recSearch(head.next, key);
+        }
+    }
 
     public static void main(String args[]){
         LinkedList ll = new LinkedList();
