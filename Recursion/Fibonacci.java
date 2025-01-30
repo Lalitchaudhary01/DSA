@@ -11,7 +11,7 @@ public class Fibonacci {
     }
 
     public static void main(String[] args) {
-        int n = 10;  // Change this value to compute a different Fibonacci number
+        int n = 6;  // Change this value to compute a different Fibonacci number
         System.out.println(fibonacci(n));  // Print the nth Fibonacci number
     }
 }
